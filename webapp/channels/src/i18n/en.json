@@ -14303,6 +14303,10 @@
     "defaultMessage": "Disable attribute",
     "description": "Title of the confirmation modal for disabling a session attribute in the System Console."
   },
+  "admin.session_attributes.dotmenu.button.aria_label": {
+    "defaultMessage": "Attribute actions",
+    "description": "Accessibility label and tooltip for the per-row '...' actions menu button in the session attributes table."
+  },
   "admin.session_attributes.dotmenu.disable.label": {
     "defaultMessage": "Disable",
     "description": "Menu item in a session attribute row's '...' menu; disables the attribute."
@@ -28611,6 +28615,10 @@
     "defaultMessage": "Undo",
     "description": "Button in the unsaved-changes panel at the bottom of settings screens that reverts the pending changes; 'Undo' is a verb."
   },
+  "saveChangesPanel.dismiss": {
+    "defaultMessage": "Dismiss",
+    "description": ""
+  },
   "saveChangesPanel.error": {
     "defaultMessage": "There was an error saving your settings",
     "description": "Error text in the unsaved-changes panel when saving settings fails."
@@ -29946,10 +29954,6 @@
   "sidebar.sortedManually": {
     "defaultMessage": "Manually",
     "description": "Sorting option label meaning channels in a sidebar category are ordered manually by the user (drag and drop); adverb."
-  },
-  "sidebar.team_menu.button.plusIcon": {
-    "defaultMessage": "Plus Icon",
-    "description": "Accessible label of the plus icon on the team sidebar button for joining or creating teams."
   },
   "sidebar.team_menu.button.teamImage": {
     "defaultMessage": "{teamName} Team Image",

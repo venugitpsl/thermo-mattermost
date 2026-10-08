@@ -5,8 +5,14 @@ import React, {useCallback} from 'react';
 import {Modal} from 'react-bootstrap';
 import {FormattedMessage, useIntl} from 'react-intl';
 
-import {ArchiveOutlineIcon} from '@mattermost/compass-icons/components';
+import {
+    ArchiveOutlineIcon,
+    ArrowLeftIcon,
+} from '@mattermost/compass-icons/components';
+import {Icon} from '@mattermost/compass-ui/components/icon';
+import {IconButton} from '@mattermost/compass-ui/components/icon-button';
 import {Button} from '@mattermost/shared/components/button';
+import {WithTooltip} from '@mattermost/shared/components/tooltip';
 import type {Group} from '@mattermost/types/groups';
 
 import type {ActionResult} from 'mattermost-redux/types/actions';
@@ -167,16 +173,15 @@ const ViewUserGroupModalHeader = ({
     return (
         <Modal.Header>
             <div className='d-flex align-items-center'>
-                <button
-                    type='button'
-                    className='modal-header-back-button btn btn-icon'
-                    aria-label={formatMessage({id: 'user_groups_modal.goBackLabel', defaultMessage: 'Back'})}
-                    onClick={goBack}
-                >
-                    <i
-                        className='icon icon-arrow-left'
+                <WithTooltip title={formatMessage({id: 'user_groups_modal.goBackLabel', defaultMessage: 'Back'})}>
+                    <IconButton
+                        size='small'
+                        className='modal-header-back-button'
+                        icon={<Icon glyph={<ArrowLeftIcon/>}/>}
+                        aria-label={formatMessage({id: 'user_groups_modal.goBackLabel', defaultMessage: 'Back'})}
+                        onClick={goBack}
                     />
-                </button>
+                </WithTooltip>
                 {modalTitle()}
             </div>
             <div className='d-flex align-items-center'>
